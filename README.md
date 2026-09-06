@@ -41,7 +41,37 @@
 
 ###  Question
 
-> ...
+> (Need the dates when the status gets changed like ordered to dispatched)
+>
+> Input :-
+
+```text
++-------+----------+----------+
+|orderid|statusdate|    status|
++-------+----------+----------+
+|      1|     1-Jan|   Ordered|
+|      1|     2-Jan|dispatched|
+|      1|     3-Jan|dispatched|
+|      1|     4-Jan|   Shipped|
+|      1|     5-Jan|   Shipped|
+|      1|     6-Jan| Delivered|
+|      2|     1-Jan|   Ordered|
+|      2|     2-Jan|dispatched|
+|      2|     3-Jan|   shipped|
++-------+----------+----------+
+```
+
+> Excepted Output :-
+>
+```text
++-------+----------+----------+
+|orderid|statusdate|    status|
++-------+----------+----------+
+|      1|     2-Jan|dispatched|
+|      1|     3-Jan|dispatched|
+|      2|     2-Jan|dispatched|
++-------+----------+----------+
+```
 
 ### 💡 Solution
 
