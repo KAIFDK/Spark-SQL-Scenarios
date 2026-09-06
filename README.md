@@ -76,3 +76,122 @@
 ### 💡 Solution
 
 👉 [View Scenario 2 Solution](./scenerio_2.py)
+
+
+## Scenario 3
+
+> Input:-
+>
+```text
++--------+----------+------+
+|sensorid| timestamp|values|
++--------+----------+------+
+|    1111|2021-01-15|    10|
+|    1111|2021-01-16|    15|
+|    1111|2021-01-17|    30|
+|    1112|2021-01-15|    10|
+|    1112|2021-01-15|    20|
+|    1112|2021-01-15|    30|
++--------+----------+------+
+```
+
+> Excepted Output :-
+>
+```text
++--------+----------+------+
+|sensorid| timestamp|values|
++--------+----------+------+
+|    1111|2021-01-15|     5|
+|    1111|2021-01-16|    15|
+|    1112|2021-01-15|    10|
+|    1112|2021-01-15|    10|
++--------+----------+------+
+```
+
+### Solution
+
+[View Scenario 3 Solution](./scenerio_3.py)
+
+## Scenario 4
+
+>(Write a query to list the unique customer names in the custtab table, along with the number of addresses associated with each customer.)
+> Input:-
+>
+```text
++------+-----------+-------+
+|custid|   custname|address|
++------+-----------+-------+
+|     1|   Mark Ray|     AB|
+|     2|Peter Smith|     CD|
+|     1|   Mark Ray|     EF|
+|     2|Peter Smith|     GH|
+|     2|Peter Smith|     CD|
+|     3|       Kate|     IJ|
++------+-----------+-------+
+```
+
+> Excepted Output :-
+>
+```text
++------+-----------+--------+
+|custid|   custname| address|
++------+-----------+--------+
+|     1|   Mark Ray|[EF, AB]|
+|     2|Peter Smith|[CD, GH]|
+|     3|       Kate|    [IJ]|
++------+-----------+--------+
+```
+
+### Solution
+
+[View Scenario 4 Solution](./scenerio_4.py)
+
+## Scenario 5
+
+> -Create a new dataframe df3 from df1, along with a new column salary, and keep it constant 1000
+> -append df2 and df3, and form df4
+> -Remove records which have invalid email from df4, emails with @ are considered to be valid.
+> -Write df4 to a target location, by partitioning on salary.
+> Input:-
+>
+```text
++---+----+---+-------------+
+| id|name|age|        email|
++---+----+---+-------------+
+|  1| abc| 31|abc@gmail.com|
+|  2| def| 23| defyahoo.com|
+|  3| xyz| 26|xyz@gmail.com|
+|  4| qwe| 34| qwegmail.com|
+|  5| iop| 24|iop@gmail.com|
++---+----+---+-------------+
+
++---+----+---+---------------+------+
+| id|name|age|          email|salary|
++---+----+---+---------------+------+
+| 11| jkl| 22|  abc@gmail.com|  1000|
+| 12| vbn| 33|  vbn@yahoo.com|  3000|
+| 13| wer| 27|            wer|  2000|
+| 14| zxc| 30|        zxc.com|  2000|
+| 15| lkj| 29|lkj@outlook.com|  2000|
++---+----+---+---------------+------+
+```
+
+> Excepted Output :-
+>
+```text
++---+----+---+---------------+------+
+| id|name|age|          email|salary|
++---+----+---+---------------+------+
+|  1| abc| 31|  abc@gmail.com|  1000|
+|  3| xyz| 26|  xyz@gmail.com|  1000|
+|  5| iop| 24|  iop@gmail.com|  1000|
+| 11| jkl| 22|  abc@gmail.com|  1000|
+| 12| vbn| 33|  vbn@yahoo.com|  3000|
+| 15| lkj| 29|lkj@outlook.com|  2000|
++---+----+---+---------------+------+
+```
+
+### Solution
+
+[View Scenario 4 Solution](./scenerio_5.py)
+
